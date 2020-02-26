@@ -37,20 +37,23 @@ namespace WFXmlTest.JobXml
                     //ищем нужные данные
                     if (childnode.Name == "FileVersion ")
                     {
-                        infa += $"Версия файла: {childnode.InnerText}"+ Environment.NewLine;
+                     //   infa += $"Версия файла: {childnode.InnerText},"+ Environment.NewLine;
+                        infa += $"{childnode.InnerText},"+ Environment.NewLine;
                         //Console.WriteLine($"Компания: {childnode.InnerText}");
                     }
 
 
                     if (childnode.Name == "Name")
                     {
-                        infa += $"Имя: {childnode.InnerText}"+ Environment.NewLine;
+                       // infa += $"Имя: {childnode.InnerText},"+ Environment.NewLine;
+                        infa += $"{childnode.InnerText},"+ Environment.NewLine;
                         //Console.WriteLine($"Возраст: {childnode.InnerText}");
                     }
 
                     if (childnode.Name == "DateTime")
                     {
-                        infa += $"Дата созднаия(изменения) файла:{childnode.InnerText}"+Environment.NewLine;
+                        //infa += $"Дата созднаия(изменения) файла:{childnode.InnerText},"+Environment.NewLine;
+                        infa += $"{childnode.InnerText},"+Environment.NewLine;
                         //  Console.WriteLine($"Возраст: {childnode.InnerText}");
                     }
                 }
@@ -59,6 +62,49 @@ namespace WFXmlTest.JobXml
             return infa;
         }
 
+        public void CreateXmlDoc()
+        {
+            var xmlWriter = new XmlTextWriter("books.xml", null);
+
+            xmlWriter.WriteStartDocument(true);                  // <?xml version="1.0" encoding="utf-8" ?>>
+            xmlWriter.WriteStartElement("ListOfBooks");      // <ListOfBooks>
+            xmlWriter.WriteStartElement("Book");             //      <Book>
+            xmlWriter.WriteString("Title-1");                //                Title-1
+            xmlWriter.WriteEndElement();                     //       </Book>
+            xmlWriter.WriteStartElement("Book");             //       <Book>
+            xmlWriter.WriteString("Title-2");                //                 Title-2
+            xmlWriter.WriteEndElement();                     //       </Book>   
+            xmlWriter.WriteEndElement();                     // </ListOfBooks>
+
+            xmlWriter.Close();
+        }
        
+        public void XmlDoc(string item)
+        {
+
+            // загружаем файл
+            var doc = new XmlDocument();
+            doc.Load("books.xml");
+
+            // меняем атрибут
+            XmlNodeList adds = doc.GetElementsByTagName("add");
+            foreach (XmlNode add in adds) { 
+                if (add.Attributes["key"].Value == "fileVersion")
+                {
+                    add.Attributes["value"].Value = item.ToString(); // новое значение
+                    break;
+                }
+            if (add.Attributes["key"].Value == "Name")
+            {
+                add.Attributes["value"].Value = item.ToString(); // новое значение
+                break;
+            }
+            
+            }
+            // сохраняем файл
+            doc.Save("books.xml");
+        }
+
+
     }
 }
