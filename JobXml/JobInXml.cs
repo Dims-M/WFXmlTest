@@ -84,10 +84,10 @@ namespace WFXmlTest.JobXml
 
             // загружаем файл
             var doc = new XmlDocument();
-            doc.Load("books.xml");
+            doc.Load("test.xml");
 
             // меняем атрибут
-            XmlNodeList adds = doc.GetElementsByTagName("add");
+            XmlNodeList adds = doc.GetElementsByTagName("Name");
             foreach (XmlNode add in adds) { 
                 if (add.Attributes["key"].Value == "fileVersion")
                 {
@@ -102,7 +102,7 @@ namespace WFXmlTest.JobXml
             
             }
             // сохраняем файл
-            doc.Save("books.xml");
+            doc.Save("testМ.xml");
         }
 
 

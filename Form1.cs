@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WFXmlTest.JobXml;
+using WFXmlTest.Views;
 
 namespace WFXmlTest
 {
@@ -62,6 +63,15 @@ namespace WFXmlTest
             jobXml.XmlDoc(textBox1.Text);
             jobXml.XmlDoc(textBox2.Text);
             jobXml.XmlDoc(textBox3.Text);
+
+
+        }
+
+        //кнопка работа с XML
+        private void button4_Click(object sender, EventArgs e)
+        {
+            jobToXml jobToMxl = new jobToXml();
+            jobToMxl.Show();
 
 
         }
