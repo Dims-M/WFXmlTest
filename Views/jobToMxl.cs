@@ -134,18 +134,20 @@ namespace WFXmlTest.Views
                 {
                     if (File.Exists("TestFile.xml")) // если существует данный файл
                     {
+                        int a = 0;
                         DataSet ds = new DataSet(); // создаем новый пустой кэш данных
                         ds.ReadXml("TestFile.xml"); // записываем в него XML-данные из файла
-
-                        foreach (DataRow item in ds.Tables["NewDataSet"].Rows)
+                        
+                        foreach (DataRow item in ds.Tables["File_FileVersion"].Rows)
                         {
                             int n = dataGridView1.Rows.Add(); // добавляем новую сроку в dataGridView1
 
                             dataGridView1.Rows[n].Cells[0].Value = item["Name"]; // заносим в первый столбец созданной строки данные из первого столбца таблицы ds.
                             dataGridView1.Rows[n].Cells[1].Value = item["DateTime"]; // то же самое со вторым столбцом
                             dataGridView1.Rows[n].Cells[2].Value = item["Comment"]; // то же самое с третьим столбцом
+                            a++;
                         }
-                        servis.WrateText("Были [загружены] данные из файла XML.\n");
+                        servis.WrateText($"Были [загружены] данные из файла XML{a}.\n");
                     }
                     else
                     {
