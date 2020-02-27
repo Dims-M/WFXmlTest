@@ -20,7 +20,7 @@ namespace WFXmlTest.Views
         //кнопка добавить. Из текстбоксов перенос в таблицу
         private void button2_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text == "")
+            if(textBox1.Text == "" || numericUpDown1.Value <=0)
             {
                 MessageBox.Show("Заполните все поля!!!!");
             }
