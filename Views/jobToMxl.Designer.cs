@@ -195,6 +195,7 @@
             this.button7.TabIndex = 13;
             this.button7.Text = "Загрузить XML";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // jobToXml
             // 
