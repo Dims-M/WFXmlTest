@@ -31,12 +31,22 @@ namespace WFXmlTest.Views
                 dataGridView1.Rows[n].Cells[0].Value = textBox1.Text; // столбец Name
                 dataGridView1.Rows[n].Cells[1].Value = numericUpDown1.Value; // Age
                 dataGridView1.Rows[n].Cells[2].Value = textBox2.Text; // Programmer
+                ClearTextBox();
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        //Методы
+
+        private void ClearTextBox()
+        {
+            textBox1.Text = null;
+            numericUpDown1 = null;
+            textBox2.Text = null;
         }
     }
 }
