@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml;
 
 namespace WFXmlTest.JobXml
@@ -105,6 +107,38 @@ namespace WFXmlTest.JobXml
             doc.Save("testМ.xml");
         }
 
+
+        //запись в файл
+        /// <summary>
+        /// запись в текстовой файл. Журнал событий
+        /// </summary>
+        /// <param name="myText"></param>
+        public void WrateText(string myText)
+        {
+          
+            FileInfo dirInfo = new FileInfo(@"\LogJob.txt");
+            
+            try
+            {
+                //if (!dirInfo.Exists)
+                //{
+                //    dirInfo.Create();// создание файла
+                //}
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка при записи лога \t\n " + ex);
+            }
+
+            using (StreamWriter sw = new StreamWriter("LogJob.txt", true, System.Text.Encoding.Default))
+
+            // using (StreamWriter sw = new StreamWriter(myPachDir + @"texLog.txt", true, System.Text.Encoding.Default))
+            {
+                sw.WriteLine(DateTime.Now + "\t\n" + myText); // запись
+            }
+        }
 
     }
 }
