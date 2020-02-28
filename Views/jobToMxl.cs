@@ -64,7 +64,13 @@ namespace WFXmlTest.Views
             LoadToXml();
         }
 
-        //Методы
+        //Кнопка редактирования
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Методы*****
 
         private void ClearTextBox()
         {
@@ -162,8 +168,7 @@ namespace WFXmlTest.Views
                 servis.WrateText("[Ошибки при загрузке файла] Xml\n" + ex);
             }
         }
-      
 
-       
+      
     }
 }
