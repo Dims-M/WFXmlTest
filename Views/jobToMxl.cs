@@ -80,6 +80,9 @@ namespace WFXmlTest.Views
                 dataGridView1.Rows[n].Cells[0].Value = textBox1.Text;
                 dataGridView1.Rows[n].Cells[1].Value = numericUpDown1.Value;
                 dataGridView1.Rows[n].Cells[2].Value = textBox2.Text;
+
+                servis = new JobInXml();
+                servis.WrateText("Строка с данными была [изменена]");
             }
             else
             {
@@ -91,7 +94,6 @@ namespace WFXmlTest.Views
         //Событие клика мышки по форме грида
         private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
         {
-
             try
             {
 
