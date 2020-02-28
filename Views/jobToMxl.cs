@@ -213,7 +213,16 @@ namespace WFXmlTest.Views
             }
         }
 
-
-       
+        //Кнопка очистить table DG
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Rows.Count > 0)
+            {
+                servis = new JobInXml();
+                dataGridView1.Rows.Clear();
+                servis.WrateText($"[Очистка] таблицы");
+            }
+            
+        }
     }
 }
