@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WFXmlTest.JobXml;
@@ -71,11 +72,12 @@ namespace WFXmlTest.Views
             LoadToXml();
         }
 
-        //Кнопка редактирования
+        //Кнопка редактирования и сохранения данных в dataGrid
         private void button3_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
+
                 int n = dataGridView1.SelectedRows[0].Index;
                 dataGridView1.Rows[n].Cells[0].Value = textBox1.Text;
                 dataGridView1.Rows[n].Cells[1].Value = numericUpDown1.Value;
@@ -84,8 +86,9 @@ namespace WFXmlTest.Views
                 servis = new JobInXml();
                 servis.WrateText("Строка с данными была [изменена]");
 
-                dataGridView1.Rows[0].DefaultCellStyle.BackColor = Color.Gray;
-                n = 0;
+                dataGridView1.Rows[n].DefaultCellStyle.BackColor = Color.Gray;
+
+                
             }
             else
             {
@@ -105,7 +108,19 @@ namespace WFXmlTest.Views
             int n = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[1].Value);
             numericUpDown1.Value = n;
             textBox2.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-           button3.Enabled = true; // делаем кнопку редактирования активной
+            button3.Enabled = true; // делаем кнопку редактирования активной
+
+                string a = Color.Black.ToString();
+
+                //for (int i =1; i<1;i++)
+                //{
+                // textBox1.Text.c = Color.Black;
+                // numericUpDown1.BackColor = Color.Black;
+                // textBox2.BackColor = Color.Black;
+                // Thread.Sleep(1000);
+
+                //}
+            
 
             }
             catch (Exception ex)
