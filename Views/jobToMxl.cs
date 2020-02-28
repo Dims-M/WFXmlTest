@@ -85,6 +85,7 @@ namespace WFXmlTest.Views
                 servis.WrateText("Строка с данными была [изменена]");
 
                 dataGridView1.Rows[0].DefaultCellStyle.BackColor = Color.Gray;
+                n = 0;
             }
             else
             {

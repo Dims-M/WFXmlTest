@@ -141,7 +141,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(144, 44);
             this.button3.TabIndex = 9;
-            this.button3.Text = "Редактировать";
+            this.button3.Text = "Редактировать изменения";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -161,7 +161,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(117, 44);
             this.button5.TabIndex = 11;
-            this.button5.Text = "Сохранить XML";
+            this.button5.Text = "Сохранить в XML";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
