@@ -83,6 +83,8 @@ namespace WFXmlTest.Views
 
                 servis = new JobInXml();
                 servis.WrateText("Строка с данными была [изменена]");
+
+                dataGridView1.Rows[0].DefaultCellStyle.BackColor = Color.Gray;
             }
             else
             {
@@ -203,6 +205,7 @@ namespace WFXmlTest.Views
                     {
                         MessageBox.Show("XML файл не найден.", "Ошибка.");
                     }
+                  //  datagridview1.Column[0].Visible = false;
                 }
             }
 
@@ -223,6 +226,22 @@ namespace WFXmlTest.Views
                 servis.WrateText($"[Очистка] таблицы");
             }
             
+        }
+
+        //кнопка удалить
+        private void button4_Click(object sender, EventArgs e)
+        {
+            servis = new JobInXml();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index); //удаление строки.
+                servis.WrateText("Произошло [удаление] строки");
+            }
+            else
+            {
+                MessageBox.Show("Выберите строку для удаления.", "Ошибка.");
+                servis.WrateText("Ошибка при удалении строки");
+            }
         }
     }
 }
