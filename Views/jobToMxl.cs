@@ -67,10 +67,44 @@ namespace WFXmlTest.Views
         //Кнопка редактирования
         private void button3_Click(object sender, EventArgs e)
         {
-
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int n = dataGridView1.SelectedRows[0].Index;
+                dataGridView1.Rows[n].Cells[0].Value = textBox1.Text;
+                dataGridView1.Rows[n].Cells[1].Value = numericUpDown1.Value;
+                dataGridView1.Rows[n].Cells[2].Value = textBox2.Text;
+            }
+            else
+            {
+                MessageBox.Show("Выберите строку для редактирования.", "Ошибка.");
+            }
         }
 
-        //Методы*****
+
+        //Событие клика мышки по форме грида
+        private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            try
+            {
+
+            int aa = dataGridView1.SelectedRows.Count;
+            textBox1.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            int n = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[1].Value);
+            numericUpDown1.Value = n;
+            textBox2.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+
+            }
+            catch (Exception ex)
+            {
+              //  MessageBox.Show($"Ошибка\n {ex}");
+            }
+            
+        }
+
+
+
+        //***Методы*****
 
         private void ClearTextBox()
         {
@@ -130,7 +164,7 @@ namespace WFXmlTest.Views
             {
 
                 //проверка на заполненность таблицы
-                if (dataGridView1.Rows.Count > 1) //если в таблице больше нуля строк
+                if (dataGridView1.Rows.Count > 0) //если в таблице больше нуля строк
                 {
                     MessageBox.Show("Очистите поле перед загрузкой нового файла.", "Ошибка.");
                     servis.WrateText("Поля таблицы [Заполнены, требуется очистка]\n");
@@ -169,6 +203,6 @@ namespace WFXmlTest.Views
             }
         }
 
-      
+        
     }
 }
