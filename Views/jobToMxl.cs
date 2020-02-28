@@ -88,7 +88,11 @@ namespace WFXmlTest.Views
 
                 dataGridView1.Rows[n].DefaultCellStyle.BackColor = Color.Gray;
 
+                label1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+                label2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+                label3.BorderStyle = System.Windows.Forms.BorderStyle.None;
                 
+
             }
             else
             {
@@ -110,17 +114,10 @@ namespace WFXmlTest.Views
             textBox2.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             button3.Enabled = true; // делаем кнопку редактирования активной
 
-                string a = Color.Black.ToString();
 
-                //for (int i =1; i<1;i++)
-                //{
-                // textBox1.Text.c = Color.Black;
-                // numericUpDown1.BackColor = Color.Black;
-                // textBox2.BackColor = Color.Black;
-                // Thread.Sleep(1000);
-
-                //}
-            
+             label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+             label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+             label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 
             }
             catch (Exception ex)
