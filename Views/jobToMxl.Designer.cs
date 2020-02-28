@@ -228,6 +228,7 @@
             this.Controls.Add(this.button1);
             this.Name = "jobToXml";
             this.Text = "Работа с XML";
+            this.Load += new System.EventHandler(this.jobToXml_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

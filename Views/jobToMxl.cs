@@ -23,6 +23,13 @@ namespace WFXmlTest.Views
             InitializeComponent();
         }
 
+        //Действие при загрузке формы
+        private void jobToXml_Load(object sender, EventArgs e)
+        {
+            button3.Enabled = false; //отключаем кнопку редактирования
+        }
+
+
         //кнопка добавить. Из текстбоксов перенос в таблицу
         private void button2_Click(object sender, EventArgs e)
         {
@@ -93,6 +100,7 @@ namespace WFXmlTest.Views
             int n = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[1].Value);
             numericUpDown1.Value = n;
             textBox2.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+           button3.Enabled = true; // делаем кнопку редактирования активной
 
             }
             catch (Exception ex)
@@ -203,6 +211,7 @@ namespace WFXmlTest.Views
             }
         }
 
-        
+
+       
     }
 }
