@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
@@ -139,6 +140,40 @@ namespace WFXmlTest.JobXml
                 sw.WriteLine(DateTime.Now + "\t\n" + myText); // запись
             }
         }
+
+
+        public bool RegFileXml(string pathFile)
+        {
+            bool rezul = false;
+            try
+            {
+                string pattern = @"^[а-я]{1,100}[_](\d{1}|\d{10}|\d{14,20})[_]\w{1,7}[\.]xml";
+                
+                if (Regex.IsMatch(pathFile, pattern, RegexOptions.IgnoreCase))
+                {
+                    Console.WriteLine("Email подтвержден");
+
+                    rezul = true;
+                }
+                else
+                {
+                   
+                    WrateText("Файл не прошел [проверку], Некорректный файл или имя файла ");
+                    rezul = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                WrateText("Ошибка при проверке файла xml \n"+ex);
+                WrateText(ex.ToString());
+            }
+
+
+
+            return rezul;
+        }
+
+
 
     }
 }

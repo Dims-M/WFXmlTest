@@ -69,7 +69,31 @@ namespace WFXmlTest.Views
         ///Кнопка загрузки файла Xml с диска
         private void button7_Click(object sender, EventArgs e)
         {
-            LoadToXml();
+
+            if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+            {
+                return;
+            }
+              
+            // получаем выбранный файл
+            string filename = openFileDialog1.SafeFileName;
+          //  string filename = openFileDialog1.F FileName;
+            // MessageBox.Show("Файл открыт");
+
+            servis = new JobInXml();
+
+           // if (!servis.RegFileXml("ау_1_dsfh.xml"))
+            if (servis.RegFileXml(filename))
+                {
+                LoadToXml(filename);
+            }
+
+            else
+            {
+                MessageBox.Show("Файл xml не коректный..\nЗагрузите другой");
+            }
+             
+
         }
 
         //Кнопка редактирования и сохранения данных в dataGrid
@@ -181,7 +205,7 @@ namespace WFXmlTest.Views
         /// <summary>
         /// Загрузка файла в датагрид. Из формы
         /// </summary>
-        private void LoadToXml()
+        private void LoadToXml( string pathFileXml)
         {
             servis = new JobInXml();
 
@@ -197,11 +221,11 @@ namespace WFXmlTest.Views
 
                 else
                 {
-                    if (File.Exists("TestFile.xml")) // если существует данный файл
+                    if (File.Exists(pathFileXml)) // если существует данный файл
                     {
                         int a = 0;
                         DataSet ds = new DataSet(); // создаем новый пустой кэш данных
-                        ds.ReadXml("TestFile.xml"); // записываем в него XML-данные из файла
+                        ds.ReadXml(pathFileXml); // записываем в него XML-данные из файла
                         
                         foreach (DataRow item in ds.Tables["File_FileVersion"].Rows)
                         {
