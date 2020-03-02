@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WFXmlTest.Properties;
 
 namespace WFXmlTest.Update
 {
@@ -16,9 +17,6 @@ namespace WFXmlTest.Update
         /// </summary>
     class UpdateApp
     {
-        
-            private string tempPathDir = @"Log\";
-
             /// <summary>
             /// Получаем текущую версию приложения
             /// </summary>
@@ -32,18 +30,16 @@ namespace WFXmlTest.Update
             /// Получаем текущую версию Сборки приложения
             /// </summary>
             /// <returns></returns>
-            public string getAssemblyVersionApp()
+            public string GetAssemblyVersionApp()
             {
                 return Assembly.GetExecutingAssembly().GetName().Version.ToString();
             }
-
-
 
             /// <summary>
             /// запись в текстовой файл. Журнал событий
             /// </summary>
             /// <param name="myText"></param>
-            public void WrateText(string myText)
+        public void WrateText(string myText)
             {
 
                 using (StreamWriter sw = new StreamWriter(@"LogUpdate.txt", true, System.Text.Encoding.Default))

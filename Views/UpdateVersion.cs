@@ -35,7 +35,9 @@ namespace WFXmlTest.Views
         {
             UpdateApp updateApp = new UpdateApp();
             lbInfaVersion.Text = updateApp.getVersionApp();
-            lbAssemblyApp.Text = updateApp.getAssemblyVersionApp();
+            lbAssemblyApp.Text = updateApp.GetAssemblyVersionApp();
+
+
         }
     }
 }

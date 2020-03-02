@@ -37,19 +37,21 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.lbOldVersion = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbOldVersion);
             this.panel1.Controls.Add(this.lbAssemblyApp);
             this.panel1.Controls.Add(this.lbInfaVersion);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(9, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(406, 194);
             this.panel1.TabIndex = 4;
@@ -76,7 +78,7 @@
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button3.Location = new System.Drawing.Point(0, 131);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.MaximumSize = new System.Drawing.Size(406, 63);
             this.button3.MinimumSize = new System.Drawing.Size(406, 63);
             this.button3.Name = "button3";
@@ -110,7 +112,7 @@
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(406, 104);
             this.button1.TabIndex = 0;
@@ -122,7 +124,7 @@
             // 
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(9, 217);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(406, 104);
             this.panel2.TabIndex = 5;
@@ -131,6 +133,16 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // lbOldVersion
+            // 
+            this.lbOldVersion.AutoSize = true;
+            this.lbOldVersion.Location = new System.Drawing.Point(20, 97);
+            this.lbOldVersion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbOldVersion.Name = "lbOldVersion";
+            this.lbOldVersion.Size = new System.Drawing.Size(19, 13);
+            this.lbOldVersion.TabIndex = 9;
+            this.lbOldVersion.Text = "12";
+            // 
             // UpdateVersion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -138,7 +150,7 @@
             this.ClientSize = new System.Drawing.Size(419, 324);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UpdateVersion";
             this.Text = "UpdateVersion";
             this.Load += new System.EventHandler(this.UpdateVersion_Load);
@@ -160,5 +172,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label lbInfaVersion;
         private System.Windows.Forms.Label lbAssemblyApp;
+        private System.Windows.Forms.Label lbOldVersion;
     }
 }
