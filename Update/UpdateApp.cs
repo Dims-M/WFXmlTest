@@ -61,8 +61,8 @@ namespace WFXmlTest.Update
             public void StartBatDelete()
             {
                 string absolitPath = Application.StartupPath;
-                string extractPath = absolitPath + @"\new\WP_testTask.exe";
-                string finalPath = absolitPath + "\\" + @"WP_testTask.exe";
+                string extractPath = absolitPath + @"\new\WFXmlTest.exe";
+                string finalPath = absolitPath + "\\" + @"WFXmlTest.exe";
                 string path = Application.ExecutablePath;
                 string commandCopy = $"/C copy {extractPath} {absolitPath}";
                 string comandStart = $"/C start {path} /H";

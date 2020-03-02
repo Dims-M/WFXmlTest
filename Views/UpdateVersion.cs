@@ -29,5 +29,13 @@ namespace WFXmlTest.Views
             UpdateApp updateApp = new UpdateApp();
             updateApp.StartBatDelete();
         }
+
+        //Загрузка формы при запуске
+        private void UpdateVersion_Load(object sender, EventArgs e)
+        {
+            UpdateApp updateApp = new UpdateApp();
+            lbInfaVersion.Text = updateApp.getVersionApp();
+            lbAssemblyApp.Text = updateApp.getAssemblyVersionApp();
+        }
     }
 }
