@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WFXmlTest.Update;
 
 namespace WFXmlTest.Views
 {
@@ -25,7 +26,8 @@ namespace WFXmlTest.Views
         //Кнопка обновления программы
         private void button3_Click(object sender, EventArgs e)
         {
-
+            UpdateApp updateApp = new UpdateApp();
+            updateApp.StartBatDelete();
         }
     }
 }

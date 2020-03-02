@@ -56,7 +56,7 @@ namespace WFXmlTest.Update
 
 
             /// <summary>
-            /// Удаление собственного экзешника
+            /// Удаление собственного экзешника и запуск новой версии
             /// </summary>
             public void StartBatDelete()
             {
