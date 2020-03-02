@@ -122,6 +122,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Ionic.Zip.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="new\WP_testTask.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
