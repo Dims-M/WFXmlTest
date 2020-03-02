@@ -40,23 +40,23 @@ namespace WFXmlTest.JobXml
                     //ищем нужные данные
                     if (childnode.Name == "FileVersion ")
                     {
-                     //   infa += $"Версия файла: {childnode.InnerText},"+ Environment.NewLine;
-                        infa += $"{childnode.InnerText},"+ Environment.NewLine;
+                        //   infa += $"Версия файла: {childnode.InnerText},"+ Environment.NewLine;
+                        infa += $"{childnode.InnerText}," + Environment.NewLine;
                         //Console.WriteLine($"Компания: {childnode.InnerText}");
                     }
 
 
                     if (childnode.Name == "Name")
                     {
-                       // infa += $"Имя: {childnode.InnerText},"+ Environment.NewLine;
-                        infa += $"{childnode.InnerText},"+ Environment.NewLine;
+                        // infa += $"Имя: {childnode.InnerText},"+ Environment.NewLine;
+                        infa += $"{childnode.InnerText}," + Environment.NewLine;
                         //Console.WriteLine($"Возраст: {childnode.InnerText}");
                     }
 
                     if (childnode.Name == "DateTime")
                     {
                         //infa += $"Дата созднаия(изменения) файла:{childnode.InnerText},"+Environment.NewLine;
-                        infa += $"{childnode.InnerText},"+Environment.NewLine;
+                        infa += $"{childnode.InnerText}," + Environment.NewLine;
                         //  Console.WriteLine($"Возраст: {childnode.InnerText}");
                     }
                 }
@@ -65,23 +65,10 @@ namespace WFXmlTest.JobXml
             return infa;
         }
 
-        public void CreateXmlDoc()
-        {
-            var xmlWriter = new XmlTextWriter("books.xml", null);
-
-            xmlWriter.WriteStartDocument(true);                  // <?xml version="1.0" encoding="utf-8" ?>>
-            xmlWriter.WriteStartElement("ListOfBooks");      // <ListOfBooks>
-            xmlWriter.WriteStartElement("Book");             //      <Book>
-            xmlWriter.WriteString("Title-1");                //                Title-1
-            xmlWriter.WriteEndElement();                     //       </Book>
-            xmlWriter.WriteStartElement("Book");             //       <Book>
-            xmlWriter.WriteString("Title-2");                //                 Title-2
-            xmlWriter.WriteEndElement();                     //       </Book>   
-            xmlWriter.WriteEndElement();                     // </ListOfBooks>
-
-            xmlWriter.Close();
-        }
-       
+        /// <summary>
+        /// Чтение xml
+        /// </summary>
+        /// <param name="item"></param>
         public void XmlDoc(string item)
         {
 
@@ -117,22 +104,6 @@ namespace WFXmlTest.JobXml
         public void WrateText(string myText)
         {
           
-            FileInfo dirInfo = new FileInfo(@"\LogJob.txt");
-            
-            try
-            {
-                //if (!dirInfo.Exists)
-                //{
-                //    dirInfo.Create();// создание файла
-                //}
-
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ошибка при записи лога \t\n " + ex);
-            }
-
             using (StreamWriter sw = new StreamWriter("LogJob.txt", true, System.Text.Encoding.Default))
 
             // using (StreamWriter sw = new StreamWriter(myPachDir + @"texLog.txt", true, System.Text.Encoding.Default))
@@ -141,7 +112,11 @@ namespace WFXmlTest.JobXml
             }
         }
 
-
+        /// <summary>
+        /// Проверка коректности имени файла XML с помощью регулярки
+        /// </summary>
+        /// <param name="pathFile"></param>
+        /// <returns></returns>
         public bool RegFileXml(string pathFile)
         {
             bool rezul = false;
@@ -151,8 +126,6 @@ namespace WFXmlTest.JobXml
                 
                 if (Regex.IsMatch(pathFile, pattern, RegexOptions.IgnoreCase))
                 {
-                    Console.WriteLine("Email подтвержден");
-
                     rezul = true;
                 }
                 else

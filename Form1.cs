@@ -35,16 +35,16 @@ namespace WFXmlTest
         //кнопка прочитать файл
         private void button2_Click(object sender, EventArgs e)
         {
-            jobXml = new JobInXml();
+            //jobXml = new JobInXml();
 
 
-            //  tbShow.Text = jobXml.ReadingXml();
-            String str = jobXml.ReadingXml();
-            String[] strlist = str.Split(',');
+            ////  tbShow.Text = jobXml.ReadingXml();
+            //String str = jobXml.ReadingXml();
+            //String[] strlist = str.Split(',');
 
-            textBox1.Text = strlist[0];
-            textBox2.Text = strlist[1];
-            textBox3.Text = strlist[2];
+            //textBox1.Text = strlist[0];
+            //textBox2.Text = strlist[1];
+            //textBox3.Text = strlist[2];
 
         }
 
@@ -56,14 +56,8 @@ namespace WFXmlTest
         //кнопка редактирования и  сохранения файлов
         private void button3_Click(object sender, EventArgs e)
         {
-            jobXml = new JobInXml();
-
-            // jobXml.CreateXmlDoc(); // создание нового xml файла
-
-            jobXml.XmlDoc(textBox1.Text);
-            jobXml.XmlDoc(textBox2.Text);
-            jobXml.XmlDoc(textBox3.Text);
-
+            UpdateVersion updateVersionForm = new UpdateVersion();
+            updateVersionForm.Show();
 
         }
 

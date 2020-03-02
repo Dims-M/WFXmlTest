@@ -77,12 +77,9 @@ namespace WFXmlTest.Views
               
             // получаем выбранный файл
             string filename = openFileDialog1.SafeFileName;
-          //  string filename = openFileDialog1.F FileName;
-            // MessageBox.Show("Файл открыт");
-
+          
             servis = new JobInXml();
 
-           // if (!servis.RegFileXml("ау_1_dsfh.xml"))
             if (servis.RegFileXml(filename))
                 {
                 LoadToXml(filename);
@@ -92,8 +89,7 @@ namespace WFXmlTest.Views
             {
                 MessageBox.Show("Файл xml не коректный..\nЗагрузите другой");
             }
-             
-
+          
         }
 
         //Кнопка редактирования и сохранения данных в dataGrid

@@ -55,6 +55,7 @@
     <Compile Include="JobXml\JobInXml.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Update\UpdateApp.cs" />
     <Compile Include="Views\JobToMxl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +64,12 @@
     </Compile>
     <Compile Include="Views\MyTextBox.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\UpdateVersion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UpdateVersion.Designer.cs">
+      <DependentUpon>UpdateVersion.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -79,6 +86,9 @@
     <EmbeddedResource Include="Views\JobToMxl.resx">
       <DependentUpon>JobToMxl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\UpdateVersion.resx">
+      <DependentUpon>UpdateVersion.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,6 +102,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="new\WP_testTask.exe" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
