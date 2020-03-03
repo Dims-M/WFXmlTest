@@ -180,9 +180,9 @@ namespace WFXmlTest.Views
                     foreach (DataGridViewRow r in dataGridView1.Rows) // пока в dataGridView1 есть строки
                     {
                         DataRow row = ds.Tables["File_FileVersion"].NewRow(); // создаем новую строку в таблице, занесенной в ds
-                        row["Name"] = r.Cells[0].Value;  //в столбец этой строки заносим данные из первого столбца dataGridView1
-                        row["DateTime"] = r.Cells[1].Value; // то же самое со вторыми столбцами
-                        row["Comment"] = r.Cells[2].Value; //то же самое с третьими столбцами
+                        row["FileVersion"] = r.Cells[0].Value;  //в столбец этой строки заносим данные из первого столбца dataGridView1
+                        row["Name"] = r.Cells[1].Value; // то же самое со вторыми столбцами
+                        row["DateTime"] = r.Cells[2].Value; //то же самое с третьими столбцами
                         ds.Tables["File_FileVersion"].Rows.Add(row); //добавление всей этой строки в таблицу ds.
                     }
 
@@ -227,9 +227,9 @@ namespace WFXmlTest.Views
                         {
                             int n = dataGridView1.Rows.Add(); // добавляем новую сроку в dataGridView1
 
-                            dataGridView1.Rows[n].Cells[0].Value = item["Name"]; // заносим в первый столбец созданной строки данные из первого столбца таблицы ds.
-                            dataGridView1.Rows[n].Cells[1].Value = item["DateTime"]; // то же самое со вторым столбцом
-                            dataGridView1.Rows[n].Cells[2].Value = item["Comment"]; // то же самое с третьим столбцом
+                            dataGridView1.Rows[n].Cells[0].Value = item["FileVersion"]; // заносим в первый столбец созданной строки данные из первого столбца таблицы ds.
+                            dataGridView1.Rows[n].Cells[1].Value = item["Name"]; // то же самое со вторым столбцом
+                            dataGridView1.Rows[n].Cells[2].Value = item["DateTime"]; // то же самое с третьим столбцом
                             a++;
                         }
                         servis.WrateText($"Были [загружены] данные из файла XML{a}.\n");
