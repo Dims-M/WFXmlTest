@@ -171,7 +171,7 @@ namespace WFXmlTest.Views
                     ds.DataSetName = "root";
                     DataTable dt = new DataTable(); // создаем пока что пустую таблицу данных
 
-                    dt.TableName = "root"; // название таблицы
+                    dt.TableName = "File"; // название таблицы
                     dt.Columns.Add("FileVersion"); // название колонок
                     dt.Columns.Add("Name");
                     dt.Columns.Add("DateTime");
@@ -180,12 +180,12 @@ namespace WFXmlTest.Views
 
                     foreach (DataGridViewRow r in dataGridView1.Rows) // пока в dataGridView1 есть строки
                     {
-                        DataRow row = ds.Tables["root"].NewRow(); // создаем новую строку в таблице, занесенной в ds
+                        DataRow row = ds.Tables["File"].NewRow(); // создаем новую строку в таблице, занесенной в ds
                         row["FileVersion"] = r.Cells[0].Value;  //в столбец этой строки заносим данные из первого столбца dataGridView1
                         row["Name"] = r.Cells[1].Value; // то же самое со вторыми столбцами
                         //row["DateTime"] = r.Cells[2].Value; //то же самое с третьими столбцами
                        row["DateTime"] = DateTime.Now;//то же самое с третьими столбцами
-                      ds.Tables["root"].Rows.Add(row); //добавление всей этой строки в таблицу ds.
+                      ds.Tables["File"].Rows.Add(row); //добавление всей этой строки в таблицу ds.
                     }
 
                     ds.WriteXml("TestFile.xml"); // создание файла XML из  DataSet
