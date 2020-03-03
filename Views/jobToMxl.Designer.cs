@@ -211,12 +211,12 @@
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Имя файла";
+            this.Column1.HeaderText = "Name";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.ToolTipText = "Нименование файла";
+            this.Column1.ToolTipText = "Наименование файла";
             // 
             // Column2
             // 
