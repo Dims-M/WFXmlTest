@@ -49,7 +49,7 @@ namespace WFXmlTest.Views
                 int n = dataGridView1.Rows.Add(); // создаем новую строку
                 dataGridView1.Rows[n].Cells[0].Value = textBox1.Text; // столбец Name
                 dataGridView1.Rows[n].Cells[1].Value = numericUpDown1.Value; // Age
-                dataGridView1.Rows[n].Cells[2].Value = textBox2.Text; // Programmer
+               // dataGridView1.Rows[n].Cells[2].Value = textBox2.Text; // Programmer
                 ClearTextBox();
                 servis.WrateText("Данные добавлены в таблицу DataGridView");
             }
@@ -110,7 +110,7 @@ namespace WFXmlTest.Views
 
                 label1.BorderStyle = System.Windows.Forms.BorderStyle.None;
                 label2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-                label3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+               // label3.BorderStyle = System.Windows.Forms.BorderStyle.None;
                 
 
             }
@@ -131,13 +131,13 @@ namespace WFXmlTest.Views
             textBox1.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             int n = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[1].Value);
             numericUpDown1.Value = n;
-            textBox2.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+          //  textBox2.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             button3.Enabled = true; // делаем кнопку редактирования активной
 
 
              label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
              label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-             label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            // label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 
             }
             catch (Exception ex)
@@ -155,7 +155,7 @@ namespace WFXmlTest.Views
         {
             textBox1.Text = "";
             numericUpDown1.Value = 0;
-            textBox2.Text = "";
+            //textBox2.Text = "";
         }
 
         /// <summary>
