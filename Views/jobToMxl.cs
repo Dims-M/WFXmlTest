@@ -99,9 +99,9 @@ namespace WFXmlTest.Views
             {
 
                 int n = dataGridView1.SelectedRows[0].Index;
-                dataGridView1.Rows[n].Cells[0].Value = textBox1.Text;
-                dataGridView1.Rows[n].Cells[1].Value = numericUpDown1.Value;
-                dataGridView1.Rows[n].Cells[2].Value = textBox2.Text;
+                dataGridView1.Rows[n].Cells[1].Value = textBox1.Text; //имя
+                dataGridView1.Rows[n].Cells[0].Value = numericUpDown1.Value; //версия
+               // dataGridView1.Rows[n].Cells[2].Value = textBox2.Text; //кометн
 
                 servis = new JobInXml();
                 servis.WrateText("Строка с данными была [изменена]");
@@ -181,8 +181,8 @@ namespace WFXmlTest.Views
                     foreach (DataGridViewRow r in dataGridView1.Rows) // пока в dataGridView1 есть строки
                     {
                         DataRow row = ds.Tables["File"].NewRow(); // создаем новую строку в таблице, занесенной в ds
-                        row["FileVersion"] = r.Cells[0].Value;  //в столбец этой строки заносим данные из первого столбца dataGridView1
-                        row["Name"] = r.Cells[1].Value; // то же самое со вторыми столбцами
+                        row["FileVersion"] = r.Cells[1].Value;  //в столбец этой строки заносим данные из первого столбца dataGridView1
+                        row["Name"] = r.Cells[0].Value; // то же самое со вторыми столбцами
                         //row["DateTime"] = r.Cells[2].Value; //то же самое с третьими столбцами
                        row["DateTime"] = DateTime.Now;//то же самое с третьими столбцами
                       ds.Tables["File"].Rows.Add(row); //добавление всей этой строки в таблицу ds.
