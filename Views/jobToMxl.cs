@@ -223,7 +223,7 @@ namespace WFXmlTest.Views
                         DataSet ds = new DataSet(); // создаем новый пустой кэш данных
                         ds.ReadXml(pathFileXml); // записываем в него XML-данные из файла
                         
-                        foreach (DataRow item in ds.Tables["File_FileVersion"].Rows)
+                        foreach (DataRow item in ds.Tables["File FileVersion"].Rows)
                         {
                             int n = dataGridView1.Rows.Add(); // добавляем новую сроку в dataGridView1
 
