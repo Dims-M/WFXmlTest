@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WFXmlTest.Properties;
 using Ionic.Zip;
+using System.Net;
 
 namespace WFXmlTest.Update
 {
@@ -84,49 +85,21 @@ namespace WFXmlTest.Update
             }
 
 
-        //Тестовые методы 
+        
         /// <summary>
-        /// Получение файла обновления ссайта 000webhostapp.com
+        /// Получение файла обновления 000webhostapp.com
         /// </summary>
-        public bool GetFailSite()
+        public bool GetFailUpdateApp()
         {
-
-            string errorLog = $"{DateTime.Now.ToString()}\t\n";
-            // string pathFile =  Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)+ $@"\UtilKKM-Servis\ОбновлениеВремени{errorLog}.zip"; // загрузка обновления
-            //string pathFile = Application.ExecutablePath + $@"\UtilKKM-Servis\ОбновлениеВремени{errorLog}.zip"; // загрузка обновления
-            // string pathFile = Application.StartupPath + @"\UtilKKM-Servis\ОбновлениеВремени.zip"; // загрузка обновления
-            string pathFile = Application.StartupPath + @"\UtilKKM-Servis\ОбновлениеВремени.zip"; // загрузка обновления
-            string serFtp = @"https://testkkm.000webhostapp.com/GetUpTime/TimeUpdatesWF.zip";
+            string pathFile = Application.StartupPath + @"\new\UpdateApp.zip"; // загрузка обновления
+            string serFtp = @"https://testkkm.000webhostapp.com/testUpdate/UpdateApp.zip";
             string absolitPath = Application.StartupPath;
             bool resul = false;
 
-            if (!Directory.Exists(absolitPath + @"\UtilKKM-Servis\")) ;
-            {
-                Directory.CreateDirectory(absolitPath + @"\UtilKKM-Servis\");
-                Directory.CreateDirectory(absolitPath + @"\UtilKKM-Servis\OldApp\");
-
-            }
-
-
-
-            // File.Delete(pathFile);
-
-
-            //if (System.IO.File.Exists(pathFile))
-            //{
-            //    errorLog += $"Данный файл уже существует \t\n{serFtp}\t\n";
-            //    WrateText(errorLog);
-            //    File.Delete(pathFile);
-            //    errorLog += $"Старый файл был удален \t\n{serFtp}\t\n";
-            //}
-
-            //else 
-
-            File.Delete(pathFile);
             using (var web = new WebClient())
             {
                 try
-                {
+                {   File.Delete(pathFile+ @"UpdateApp.zip");
                     // скачиваем откуда и куда
                     web.DownloadFile(serFtp, pathFile);
                     resul = true;
@@ -142,44 +115,15 @@ namespace WFXmlTest.Update
             return resul;
         }
 
-
         /// <summary>
-        /// Разорхивация файлов с указание что и куда орхивировать
-        /// </summary>
-        /// <param name="MyzipFail">Путь для файла.Откуда и какой архив</param>
-        /// <param name="MyExtractPath">Куда распаковыватьы</param>
-        public void ZipArhivMyPath(string MyzipFail, string MyExtractPath)
-        {
-            try
-            {
-                using (ZipFile zip = ZipFile.Read(MyzipFail))
-                {
-                    foreach (ZipEntry e in zip)
-                    {
-                        e.Extract(MyExtractPath, ExtractExistingFileAction.OverwriteSilently); // перезаписывать существующие
-                    }
-                }
-                // ZipFile.ExtractToDirectory(MyzipFail, MyExtractPath);
-            }
-
-            catch (Exception ex)
-            {
-                WrateText("Ошибка при разорхивации архива EoU\n" + ex);
-            }
-
-            // File.Delete(MyzipFail);
-        }
-
-
-        /// <summary>
-        /// Распаковка скаченой версии обновленной версии
+        /// Распаковка zip архива скаченной версии обновленной версии
         /// </summary>
         public bool StartUptadeApp()
         {
             string absolitPath = Application.StartupPath;
-            string zipPath = absolitPath + @"\UtilKKM-Servis\ОбновлениеВремени.zip";
-            string extractPath = absolitPath + @"\UtilKKM-Servis\ОбновлениеВремени\";
-            string tempPachh = absolitPath + @"\UtilKKM-Servis\OldApp\jj.zip";
+            string zipPath = absolitPath + @"\new\UpdateApp.zip";
+            string extractPath = absolitPath + @"\new\";
+           // string tempPachh = absolitPath + @"\UtilKKM-Servis\OldApp\jj.zip";
 
             try
             {
@@ -191,22 +135,14 @@ namespace WFXmlTest.Update
                     }
                 }
 
-                File.Move(zipPath, tempPachh);
-                // string tempPachh = extractPath + @"\OldApp\";// + $"Старая версияAPP{DateTime.Now}.zip";
-                // FileInfo fileInf = new FileInfo(zipPath);
-                // fileInf.MoveTo(tempPachh); // перенос старого файла
+                File.Move(zipPath, zipPath);
 
-                //установка новой версии
-                StartNewApliccation(extractPath + @"TimeUpdatesWF.msi");
             }
 
             catch (Exception ex)
             {
                 WrateText("Ошибка при разорхивации архива EoU\n" + ex);
             }
-
-
-
             return true;
         }
 

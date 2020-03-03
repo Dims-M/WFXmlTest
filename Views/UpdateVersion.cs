@@ -13,6 +13,8 @@ namespace WFXmlTest.Views
 {
     public partial class UpdateVersion : Form
     {
+        UpdateApp updateApp;
+
         public UpdateVersion()
         {
             InitializeComponent();
@@ -26,8 +28,9 @@ namespace WFXmlTest.Views
         //Кнопка обновления программы
         private void button3_Click(object sender, EventArgs e)
         {
-            UpdateApp updateApp = new UpdateApp();
+            updateApp = new UpdateApp();
             updateApp.StartBatDelete();
+           
         }
 
         //Загрузка формы при запуске
@@ -38,6 +41,27 @@ namespace WFXmlTest.Views
             lbAssemblyApp.Text = updateApp.GetAssemblyVersionApp();
 
 
+        }
+
+        //Кнопка скачать обновление с инернета
+        private void button2_Click(object sender, EventArgs e)
+        {
+            updateApp = new UpdateApp();
+            bool temp = false;
+
+            temp = updateApp.GetFailUpdateApp();
+            updateApp.StartUptadeApp();
+
+            if (temp == true )
+            {
+                MessageBox.Show("Обновление скачено. И Готово к установке! \n Нажмите кнопку \"Обновить программу из локального хранилища!\" ");
+            }
+
+            else
+            {
+                MessageBox.Show("Проблеммы при скачивании и установки обновления.\n Проверте интернет, Антивирус и смотриле лог ");
+
+            }
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WFXmlTest.JobXml;
+using WFXmlTest.Update;
 using WFXmlTest.Views;
 
 namespace WFXmlTest
@@ -32,21 +33,21 @@ namespace WFXmlTest
 
         }
 
-        //кнопка прочитать файл
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //jobXml = new JobInXml();
+        ////кнопка прочитать файл
+        //private void button2_Click(object sender, EventArgs e)
+        //{
+        //    //jobXml = new JobInXml();
 
 
-            ////  tbShow.Text = jobXml.ReadingXml();
-            //String str = jobXml.ReadingXml();
-            //String[] strlist = str.Split(',');
+        //    ////  tbShow.Text = jobXml.ReadingXml();
+        //    //String str = jobXml.ReadingXml();
+        //    //String[] strlist = str.Split(',');
 
-            //textBox1.Text = strlist[0];
-            //textBox2.Text = strlist[1];
-            //textBox3.Text = strlist[2];
+        //    //textBox1.Text = strlist[0];
+        //    //textBox2.Text = strlist[1];
+        //    //textBox3.Text = strlist[2];
 
-        }
+        //}
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -56,9 +57,9 @@ namespace WFXmlTest
         //кнопка редактирования и  сохранения файлов
         private void button3_Click(object sender, EventArgs e)
         {
+      
             UpdateVersion updateVersionForm = new UpdateVersion();
-            updateVersionForm.Show();
-
+            updateVersionForm.Show();     
         }
 
         //кнопка работа с XML
