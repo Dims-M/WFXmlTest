@@ -129,9 +129,7 @@
     <Content Include="Ionic.Zip.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="new\WP_testTask.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="new\WFXmlTest.exe" />
     <Content Include="taxt.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
