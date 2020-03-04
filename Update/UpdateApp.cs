@@ -15,7 +15,7 @@ using System.Net;
 namespace WFXmlTest.Update
 {
         /// <summary>
-        /// Класс отвечает за обновление программы
+        /// Класс отвечает за обновление программы и скачивания новой версии
         /// </summary>
     class UpdateApp
     {
