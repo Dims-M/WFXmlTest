@@ -1,0 +1,17 @@
+03.03.2020 11:11:29	
+Ошибка при скачивании обновлений 	
+System.IO.DirectoryNotFoundException: Не удалось найти часть пути "C:\Users\Dim\source\repos\WFXmlTest\bin\Release\new\UpdateApp.zipUpdateApp.zip".
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalDelete(String path, Boolean checkHost)
+   в System.IO.File.Delete(String path)
+   в WFXmlTest.Update.UpdateApp.GetFailUpdateApp() в C:\Users\Dim\source\repos\WFXmlTest\Update\UpdateApp.cs:строка 102
+03.03.2020 11:11:29	
+Ошибка при разорхивации архива EoU
+System.IO.DirectoryNotFoundException: Не удалось найти часть пути "C:\Users\Dim\source\repos\WFXmlTest\bin\Release\new\UpdateApp.zip".
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   в System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   в Ionic.Zip.ZipFile.get_ReadStream()
+   в Ionic.Zip.ZipFile.ReadIntoInstance(ZipFile zf)
+   в Ionic.Zip.ZipFile.Read(String fileName, TextWriter statusMessageWriter, Encoding encoding, EventHandler`1 readProgress)
+   в WFXmlTest.Update.UpdateApp.StartUptadeApp() в C:\Users\Dim\source\repos\WFXmlTest\Update\UpdateApp.cs:строка 123

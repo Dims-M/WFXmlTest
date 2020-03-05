@@ -1,0 +1,438 @@
+03.03.2020 11:40:08	
+[Ошибки при загрузке файла] Xml
+System.ArgumentException: Столбец "FileVersion" не принадлежит таблице File_FileVersion.
+   в System.Data.DataRow.GetDataColumn(String columnName)
+   в System.Data.DataRow.get_Item(String columnName)
+   в WFXmlTest.Views.jobToXml.LoadToXml(String pathFileXml) в C:\Users\Dim\source\repos\WFXmlTest\Views\JobToMxl.cs:строка 230
+03.03.2020 11:40:16	
+[Очистка] таблицы
+03.03.2020 11:43:44	
+[Ошибки при загрузке файла] Xml
+System.ArgumentException: Столбец "FileVersion" не принадлежит таблице File_FileVersion.
+   в System.Data.DataRow.GetDataColumn(String columnName)
+   в System.Data.DataRow.get_Item(String columnName)
+   в WFXmlTest.Views.jobToXml.LoadToXml(String pathFileXml) в C:\Users\Dim\source\repos\WFXmlTest\Views\JobToMxl.cs:строка 230
+03.03.2020 11:43:50	
+[Заполните все поля, перед добавлением в таблицу вывода!!!!] 
+
+03.03.2020 11:43:52	
+[Очистка] таблицы
+03.03.2020 11:43:53	
+[Заполните все поля, перед добавлением в таблицу вывода!!!!] 
+
+03.03.2020 11:43:59	
+[Заполните все поля, перед добавлением в таблицу вывода!!!!] 
+
+03.03.2020 11:44:07	
+Данные добавлены в таблицу DataGridView
+03.03.2020 11:44:28	
+Поля таблицы [Заполнены, требуется очистка]
+
+03.03.2020 11:44:32	
+[Очистка] таблицы
+03.03.2020 11:54:57	
+[Ошибки при загрузке файла] Xml
+System.Xml.XmlException: Знак "=", шестнадцатеричное значение 0x3D, не может стоять в начале имени., строка 3, позиция 20.
+   в System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   в System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   в System.Xml.XmlTextReaderImpl.ParseAttributes()
+   в System.Xml.XmlTextReaderImpl.ParseElement()
+   в System.Xml.XmlTextReaderImpl.ParseElementContent()
+   в System.Xml.XmlTextReaderImpl.Read()
+   в System.Xml.XmlTextReader.Read()
+   в System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   в System.Data.DataSet.ReadXml(String fileName)
+   в WFXmlTest.Views.jobToXml.LoadToXml(String pathFileXml) в C:\Users\Dim\source\repos\WFXmlTest\Views\JobToMxl.cs:строка 224
+03.03.2020 13:24:14	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 13:24:44	
+Поля таблицы [Заполнены, требуется очистка]
+
+03.03.2020 13:24:52	
+[Очистка] таблицы
+03.03.2020 13:24:56	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 13:26:09	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 13:26:32	
+[Ошибка при создании(DataSet) и сохранении XML файл на жесткий диск] 
+System.ArgumentException: Столбец "FileVersion" не принадлежит таблице File_FileVersion.
+   в System.Data.DataRow.GetDataColumn(String columnName)
+   в System.Data.DataRow.set_Item(String columnName, Object value)
+   в WFXmlTest.Views.jobToXml.SaveXmlToFileDoc() в C:\Users\Dim\source\repos\WFXmlTest\Views\JobToMxl.cs:строка 183
+03.03.2020 13:27:54	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 13:28:01	
+[Очистка] таблицы
+03.03.2020 13:28:03	
+[Ошибки при загрузке файла] Xml
+System.Xml.XmlException: Недопустимые данные на корневом уровне., строка 10, позиция 1.
+   в System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   в System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   в System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   в System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   в System.Xml.XmlTextReaderImpl.Read()
+   в System.Xml.XmlTextReader.Read()
+   в System.Xml.XmlReader.ReadEndElement()
+   в System.Data.DataSet.ReadEndElement(XmlReader reader)
+   в System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   в System.Data.DataSet.ReadXml(String fileName)
+   в WFXmlTest.Views.jobToXml.LoadToXml(String pathFileXml) в C:\Users\Dim\source\repos\WFXmlTest\Views\JobToMxl.cs:строка 224
+03.03.2020 13:28:14	
+[Ошибки при загрузке файла] Xml
+System.Xml.XmlException: Недопустимые данные на корневом уровне., строка 10, позиция 1.
+   в System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   в System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   в System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   в System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   в System.Xml.XmlTextReaderImpl.Read()
+   в System.Xml.XmlTextReader.Read()
+   в System.Xml.XmlReader.ReadEndElement()
+   в System.Data.DataSet.ReadEndElement(XmlReader reader)
+   в System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   в System.Data.DataSet.ReadXml(String fileName)
+   в WFXmlTest.Views.jobToXml.LoadToXml(String pathFileXml) в C:\Users\Dim\source\repos\WFXmlTest\Views\JobToMxl.cs:строка 224
+03.03.2020 13:28:18	
+[Ошибки при загрузке файла] Xml
+System.Xml.XmlException: Недопустимые данные на корневом уровне., строка 10, позиция 1.
+   в System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   в System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   в System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   в System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   в System.Xml.XmlTextReaderImpl.Read()
+   в System.Xml.XmlTextReader.Read()
+   в System.Xml.XmlReader.ReadEndElement()
+   в System.Data.DataSet.ReadEndElement(XmlReader reader)
+   в System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   в System.Data.DataSet.ReadXml(String fileName)
+   в WFXmlTest.Views.jobToXml.LoadToXml(String pathFileXml) в C:\Users\Dim\source\repos\WFXmlTest\Views\JobToMxl.cs:строка 224
+03.03.2020 13:28:35	
+[Ошибки при загрузке файла] Xml
+System.Xml.XmlException: Недопустимые данные на корневом уровне., строка 10, позиция 1.
+   в System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   в System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   в System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   в System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   в System.Xml.XmlTextReaderImpl.Read()
+   в System.Xml.XmlTextReader.Read()
+   в System.Xml.XmlReader.ReadEndElement()
+   в System.Data.DataSet.ReadEndElement(XmlReader reader)
+   в System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   в System.Data.DataSet.ReadXml(String fileName)
+   в WFXmlTest.Views.jobToXml.LoadToXml(String pathFileXml) в C:\Users\Dim\source\repos\WFXmlTest\Views\JobToMxl.cs:строка 224
+03.03.2020 13:28:40	
+[Заполните все поля, перед добавлением в таблицу вывода!!!!] 
+
+03.03.2020 13:29:26	
+[Ошибки при загрузке файла] Xml
+System.Xml.XmlException: Недопустимые данные на корневом уровне., строка 10, позиция 1.
+   в System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   в System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   в System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   в System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   в System.Xml.XmlTextReaderImpl.Read()
+   в System.Xml.XmlTextReader.Read()
+   в System.Xml.XmlReader.ReadEndElement()
+   в System.Data.DataSet.ReadEndElement(XmlReader reader)
+   в System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   в System.Data.DataSet.ReadXml(String fileName)
+   в WFXmlTest.Views.jobToXml.LoadToXml(String pathFileXml) в C:\Users\Dim\source\repos\WFXmlTest\Views\JobToMxl.cs:строка 224
+03.03.2020 13:29:30	
+[Ошибки при загрузке файла] Xml
+System.Xml.XmlException: Недопустимые данные на корневом уровне., строка 10, позиция 1.
+   в System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   в System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   в System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   в System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   в System.Xml.XmlTextReaderImpl.Read()
+   в System.Xml.XmlTextReader.Read()
+   в System.Xml.XmlReader.ReadEndElement()
+   в System.Data.DataSet.ReadEndElement(XmlReader reader)
+   в System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   в System.Data.DataSet.ReadXml(String fileName)
+   в WFXmlTest.Views.jobToXml.LoadToXml(String pathFileXml) в C:\Users\Dim\source\repos\WFXmlTest\Views\JobToMxl.cs:строка 224
+03.03.2020 13:30:46	
+[Ошибки при загрузке файла] Xml
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в WFXmlTest.Views.jobToXml.LoadToXml(String pathFileXml) в C:\Users\Dim\source\repos\WFXmlTest\Views\JobToMxl.cs:строка 226
+03.03.2020 13:32:07	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 13:33:07	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 13:33:09	
+[Очистка] таблицы
+03.03.2020 13:40:24	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 13:40:55	
+Данные добавлены в таблицу DataGridView
+03.03.2020 14:50:59	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 14:51:54	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 14:53:05	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 14:55:00	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 14:57:19	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 14:58:51	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 15:01:31	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 15:02:04	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 15:03:14	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 15:03:39	
+[XML файл (TestFile.xml) успешно сохранен в папке с программой]
+03.03.2020 15:04:23	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 15:04:25	
+[Заполните все поля, перед добавлением в таблицу вывода!!!!] 
+
+03.03.2020 15:04:33	
+Данные добавлены в таблицу DataGridView
+03.03.2020 15:04:34	
+[XML файл (TestFile.xml) успешно сохранен в папке с программой]
+03.03.2020 15:04:40	
+Поля таблицы [Заполнены, требуется очистка]
+
+03.03.2020 15:04:40	
+[Очистка] таблицы
+03.03.2020 15:04:42	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 15:04:46	
+Файл не прошел [проверку], Некорректный файл или имя файла 
+03.03.2020 15:04:48	
+[Очистка] таблицы
+03.03.2020 15:04:51	
+Файл не прошел [проверку], Некорректный файл или имя файла 
+03.03.2020 15:05:29	
+[Ошибки при загрузке файла] Xml
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в WFXmlTest.Views.jobToXml.LoadToXml(String pathFileXml) в C:\Users\Dim\source\repos\WFXmlTest\Views\JobToMxl.cs:строка 227
+03.03.2020 15:06:46	
+[Ошибки при загрузке файла] Xml
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в WFXmlTest.Views.jobToXml.LoadToXml(String pathFileXml) в C:\Users\Dim\source\repos\WFXmlTest\Views\JobToMxl.cs:строка 227
+03.03.2020 15:06:56	
+[Ошибки при загрузке файла] Xml
+System.Xml.XmlException: Открывающий тег "DateTime" в позиции 6 строки 11 не соответствует закрывающему тегу "root"., строка 12, позиция 5.
+   в System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   в System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   в System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   в System.Xml.XmlTextReaderImpl.ParseEndElement()
+   в System.Xml.XmlTextReaderImpl.ParseElementContent()
+   в System.Xml.XmlTextReaderImpl.Read()
+   в System.Xml.XmlTextReader.Read()
+   в System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   в System.Xml.XmlLoader.ReadCurrentNode(XmlDocument doc, XmlReader reader)
+   в System.Xml.XmlDocument.ReadNode(XmlReader reader)
+   в System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   в System.Data.DataSet.ReadXml(String fileName)
+   в WFXmlTest.Views.jobToXml.LoadToXml(String pathFileXml) в C:\Users\Dim\source\repos\WFXmlTest\Views\JobToMxl.cs:строка 225
+03.03.2020 15:09:24	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 15:09:27	
+[XML файл (TestFile.xml) успешно сохранен в папке с программой]
+03.03.2020 15:09:32	
+Файл не прошел [проверку], Некорректный файл или имя файла 
+03.03.2020 15:10:03	
+[Очистка] таблицы
+03.03.2020 15:10:18	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 15:10:42	
+[Ошибка при создании(DataSet) и сохранении XML файл на жесткий диск] 
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в WFXmlTest.Views.jobToXml.SaveXmlToFileDoc() в C:\Users\Dim\source\repos\WFXmlTest\Views\JobToMxl.cs:строка 188
+03.03.2020 15:10:57	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 15:11:39	
+[Ошибки при загрузке файла] Xml
+System.Xml.XmlException: Открывающий тег "DateTime" в позиции 6 строки 11 не соответствует закрывающему тегу "root"., строка 12, позиция 5.
+   в System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   в System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   в System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   в System.Xml.XmlTextReaderImpl.ParseEndElement()
+   в System.Xml.XmlTextReaderImpl.ParseElementContent()
+   в System.Xml.XmlTextReaderImpl.Read()
+   в System.Xml.XmlTextReader.Read()
+   в System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   в System.Xml.XmlLoader.ReadCurrentNode(XmlDocument doc, XmlReader reader)
+   в System.Xml.XmlDocument.ReadNode(XmlReader reader)
+   в System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   в System.Data.DataSet.ReadXml(String fileName)
+   в WFXmlTest.Views.jobToXml.LoadToXml(String pathFileXml) в C:\Users\Dim\source\repos\WFXmlTest\Views\JobToMxl.cs:строка 226
+03.03.2020 15:11:49	
+[XML файл (TestFile.xml) успешно сохранен в папке с программой]
+03.03.2020 15:12:54	
+[Ошибки при загрузке файла] Xml
+System.Xml.XmlException: Открывающий тег "DateTime" в позиции 6 строки 11 не соответствует закрывающему тегу "root"., строка 12, позиция 5.
+   в System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   в System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   в System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   в System.Xml.XmlTextReaderImpl.ParseEndElement()
+   в System.Xml.XmlTextReaderImpl.ParseElementContent()
+   в System.Xml.XmlTextReaderImpl.Read()
+   в System.Xml.XmlTextReader.Read()
+   в System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   в System.Xml.XmlLoader.ReadCurrentNode(XmlDocument doc, XmlReader reader)
+   в System.Xml.XmlDocument.ReadNode(XmlReader reader)
+   в System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   в System.Data.DataSet.ReadXml(String fileName)
+   в WFXmlTest.Views.jobToXml.LoadToXml(String pathFileXml) в C:\Users\Dim\source\repos\WFXmlTest\Views\JobToMxl.cs:строка 226
+03.03.2020 15:12:57	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 15:13:32	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 15:13:36	
+[Ошибка при создании(DataSet) и сохранении XML файл на жесткий диск] 
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в WFXmlTest.Views.jobToXml.SaveXmlToFileDoc() в C:\Users\Dim\source\repos\WFXmlTest\Views\JobToMxl.cs:строка 183
+03.03.2020 15:17:08	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 15:17:36	
+[XML файл (TestFile.xml) успешно сохранен в папке с программой]
+03.03.2020 15:21:03	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 15:21:30	
+[XML файл (TestFile.xml) успешно сохранен в папке с программой]
+03.03.2020 15:22:28	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 15:22:53	
+[XML файл (TestFile.xml) успешно сохранен в папке с программой]
+03.03.2020 15:24:12	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 15:24:57	
+Данные добавлены в таблицу DataGridView
+03.03.2020 15:24:59	
+[XML файл (TestFile.xml) успешно сохранен в папке с программой]
+03.03.2020 15:26:46	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 15:26:54	
+Данные добавлены в таблицу DataGridView
+03.03.2020 15:26:56	
+[XML файл (TestFile.xml) успешно сохранен в папке с программой]
+03.03.2020 15:28:05	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 15:28:07	
+[Заполните все поля, перед добавлением в таблицу вывода!!!!] 
+
+03.03.2020 15:28:13	
+Данные добавлены в таблицу DataGridView
+03.03.2020 15:28:16	
+[XML файл (TestFile.xml) успешно сохранен в папке с программой]
+03.03.2020 15:28:38	
+[Очистка] таблицы
+03.03.2020 15:37:52	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 15:38:05	
+Данные добавлены в таблицу DataGridView
+03.03.2020 15:38:07	
+[XML файл (TestFile.xml) успешно сохранен в папке с программой]
+03.03.2020 15:39:40	
+[Заполните все поля, перед добавлением в таблицу вывода!!!!] 
+
+03.03.2020 15:39:44	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 15:39:46	
+[Заполните все поля, перед добавлением в таблицу вывода!!!!] 
+
+03.03.2020 15:39:54	
+Данные добавлены в таблицу DataGridView
+03.03.2020 15:39:57	
+[XML файл (TestFile.xml) успешно сохранен в папке с программой]
+03.03.2020 15:40:30	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 15:40:41	
+[XML файл (TestFile.xml) успешно сохранен в папке с программой]
+03.03.2020 15:41:20	
+Были [загружены] данные из файла XML1.
+
+03.03.2020 15:41:24	
+[Заполните все поля, перед добавлением в таблицу вывода!!!!] 
+
+03.03.2020 15:41:26	
+[Заполните все поля, перед добавлением в таблицу вывода!!!!] 
+
+03.03.2020 15:41:34	
+Данные добавлены в таблицу DataGridView
+03.03.2020 15:41:34	
+[XML файл (TestFile.xml) успешно сохранен в папке с программой]
+03.03.2020 15:41:48	
+[Очистка] таблицы
+04.03.2020 11:50:25	
+Были [загружены] данные из файла XML1.
+
+04.03.2020 11:51:06	
+Были [загружены] данные из файла XML1.
+
+04.03.2020 11:52:33	
+Были [загружены] данные из файла XML1.
+
+04.03.2020 12:00:40	
+[Заполните все поля, перед добавлением в таблицу вывода!!!!] 
+
+04.03.2020 12:00:45	
+Были [загружены] данные из файла XML1.
+
+04.03.2020 12:00:46	
+[Очистка] таблицы
+04.03.2020 12:00:48	
+Были [загружены] данные из файла XML1.
+
+04.03.2020 12:01:07	
+Строка с данными была [изменена]
+04.03.2020 12:01:08	
+[XML файл (TestFile.xml) успешно сохранен в папке с программой]
+04.03.2020 12:01:34	
+Поля таблицы [Заполнены, требуется очистка]
+
+04.03.2020 12:01:36	
+[Очистка] таблицы
+04.03.2020 12:01:39	
+Были [загружены] данные из файла XML1.
+
+04.03.2020 12:01:47	
+Поля таблицы [Заполнены, требуется очистка]
+
+04.03.2020 12:01:48	
+[Очистка] таблицы
+04.03.2020 12:01:53	
+Были [загружены] данные из файла XML1.
+
+04.03.2020 12:02:21	
+Были [загружены] данные из файла XML1.
+
